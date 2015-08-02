@@ -1,0 +1,8 @@
+web:
+  image: nodesource/jessie:0.10
+  volumes:
+    - src:/src
+  ports:
+    - "8000:8000"
+  working_dir: /src
+  command: node index.js
