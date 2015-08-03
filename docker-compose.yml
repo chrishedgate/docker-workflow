@@ -1,8 +1,8 @@
 web:
-  image: nodesource/jessie:0.10
+  image: chrishedgate/node-base
   volumes:
     - src:/src
   ports:
     - "8000:8000"
   working_dir: /src
-  command: node index.js
+  command: nodemon index.js

@@ -1,4 +1,4 @@
-FROM nodesource/jessie:0.10
+FROM chrishedgate/node-base
 
 MAINTAINER Chris Hedgate
 
@@ -8,4 +8,5 @@ EXPOSE 8000
 
 WORKDIR /src
 
-CMD ["node", "index.js"]
+# Should probably use pm2 instead in production
+CMD ["nodemon", "index.js"]
